@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Be Alright Tutoring — Help your child learn to read, from home</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1555926178296998');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1555926178296998&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta name="description" content="One-on-one online reading help built just for your child, by Dr. Meg Murray — a mom of four and reading specialist who has helped 200+ kids read with confidence." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --page:#FFFFFF;
+    --surface:#EAF6F5;
+    --surface2:#F4FAFB;
+    --ink:#23405E;
+    --ink-soft:#5E7287;
+    --navy-dark:#1E3450;
+    --red:#E43C48;
+    --red-deep:#D2293A;
+    --teal:#3FB1AC;
+    --teal-soft:#C3E8E5;
+    --teal-deep:#2C8480;
+    --blue:#5B8FCF;
+    --blue-deep:#3A6BB0;
+    --line:rgba(35,64,94,0.14);
+    --soft-shadow:0 16px 38px -20px rgba(35,64,94,0.42);
+    --maxw:1100px;
+    --display:"Fredoka",system-ui,sans-serif;
+    --body:"Nunito",system-ui,-apple-system,sans-serif;
+    --hand:"Caveat",cursive;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;color:var(--ink);font-family:var(--body);
+    font-size:clamp(1.02rem,0.99rem + 0.2vw,1.12rem);line-height:1.65;-webkit-font-smoothing:antialiased;
+    background-color:var(--page);
+    background-image:radial-gradient(rgba(63,177,172,0.16) 1.4px, transparent 1.4px);
+    background-size:26px 26px;}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;letter-spacing:-0.005em;margin:0;}
+  p{margin:0;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .section{padding:clamp(56px,8vw,104px) 0;}
+
+  .eyebrow{font-family:var(--body);font-size:0.8rem;font-weight:800;letter-spacing:0.13em;text-transform:uppercase;
+    color:var(--teal-deep);display:inline-flex;align-items:center;gap:9px;}
+  .eyebrow::before{content:"";width:22px;height:3px;background:var(--teal);display:inline-block;border-radius:3px;}
+
+  .hand{font-family:var(--hand);font-weight:600;color:var(--red);font-size:1.5rem;line-height:1;transform:rotate(-3deg);display:inline-block;}
+
+  /* centered section headers (used by all subsections) */
+  .head{text-align:center;max-width:56ch;margin:0 auto clamp(34px,5vw,46px);}
+  .head .eyebrow{justify-content:center;}
+  .head h2{margin:14px auto 14px;}
+  .head .micro,.head .sub,.head .headp{margin-left:auto;margin-right:auto;}
+
+  /* marker highlight */
+  .mark{position:relative;white-space:nowrap;}
+  .mark::after{content:"";position:absolute;left:-3%;right:-3%;bottom:-0.06em;height:0.5em;border-radius:7px;
+    background:rgba(63,177,172,0.38);z-index:-1;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--display);
+    font-weight:600;font-size:1.08rem;padding:17px 34px;border-radius:999px;border:3px solid transparent;
+    cursor:pointer;text-decoration:none;transition:transform .15s ease,box-shadow .2s ease,background .2s ease;}
+  .btn-primary{background:var(--red-deep);color:#fff;box-shadow:0 14px 26px -12px rgba(210,41,58,.85);}
+  .btn-primary:hover{background:#bb2333;transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:var(--blue-deep);border-color:var(--blue);}
+  .btn-ghost:hover{background:var(--blue);color:#fff;}
+  .btn-teal{background:var(--teal);color:#fff;}
+  .btn-teal:hover{background:var(--teal-deep);transform:translateY(-2px);}
+  .btn .arrow{transition:transform .15s ease;}
+  .btn:hover .arrow{transform:translateX(3px);}
+  .btn-big{font-size:1.18rem;padding:20px 42px;}
+  .micro{font-size:0.92rem;color:var(--ink-soft);}
+  :focus-visible{outline:3px solid var(--blue-deep);outline-offset:3px;border-radius:6px;}
+
+  /* nav */
+  header.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 22px;max-width:var(--maxw);margin:0 auto;}
+  .logo-img{height:46px;width:auto;}
+  .nav-cta{display:none;}
+  @media(min-width:760px){.nav-cta{display:inline-flex;padding:11px 22px;font-size:0.96rem;}}
+
+  /* ---------- HERO : centered ---------- */
+  .hero{padding:clamp(32px,5vw,60px) 0 clamp(48px,6vw,80px);text-align:center;}
+  .pre{display:inline-block;background:#fff;border:2px dashed var(--teal);color:var(--teal-deep);
+    font-family:var(--display);font-weight:500;font-size:0.86rem;letter-spacing:.02em;padding:8px 18px;border-radius:999px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(2.25rem,5.4vw,3.85rem);font-weight:600;margin:0 auto 18px;max-width:20ch;}
+  .hero h1 em{font-style:normal;color:var(--red);}
+  .hero .sub{font-size:clamp(1.1rem,1.6vw,1.3rem);color:var(--ink-soft);max-width:52ch;margin:0 auto 0;}
+
+  /* VSL centered */
+  .vsl-shell{max-width:780px;margin:34px auto 0;position:relative;}
+  .vsl-note{position:absolute;left:50%;transform:translateX(-50%) rotate(-3deg);top:-36px;z-index:3;}
+  @media(min-width:680px){.vsl-note{left:auto;right:-30px;transform:rotate(-3deg);top:-22px;}}
+  .vsl-frame{border-radius:24px;overflow:hidden;border:4px solid #fff;box-shadow:var(--soft-shadow);background:var(--navy-dark);}
+
+  /* CTA below video */
+  .hero-cta{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:12px;}
+  .hero-reassure{font-size:0.96rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px;justify-content:center;}
+
+  /* benefit points under CTA */
+  .hbenefits{list-style:none;padding:0;margin:34px auto 0;display:grid;gap:16px;max-width:880px;grid-template-columns:1fr;}
+  @media(min-width:720px){.hbenefits{grid-template-columns:repeat(3,1fr);}}
+  .hbenefits li{display:flex;gap:13px;align-items:flex-start;text-align:left;background:#fff;border:1px solid var(--line);
+    border-radius:16px;padding:18px 20px;font-weight:700;box-shadow:0 10px 24px -20px rgba(35,64,94,.5);}
+  .hbenefits .c{flex:0 0 auto;width:32px;height:32px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;margin-top:1px;}
+  .hbenefits li:nth-child(1) .c{background:var(--red);}
+  .hbenefits li:nth-child(2) .c{background:var(--teal);}
+  .hbenefits li:nth-child(3) .c{background:var(--blue);}
+
+  /* trust */
+  .trust{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .trust-inner{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 14px;padding:34px 22px;max-width:var(--maxw);margin:0 auto;text-align:center;}
+  @media(min-width:760px){.trust-inner{grid-template-columns:repeat(4,1fr);}}
+  .trust .num{font-family:var(--display);font-weight:600;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1;color:var(--ink);}
+  .trust .num span{color:var(--red);}
+  .trust .lbl{font-size:0.82rem;letter-spacing:.02em;color:var(--ink-soft);margin-top:7px;font-weight:700;}
+
+  /* recognition */
+  .recognition h2{font-size:clamp(1.9rem,4vw,2.8rem);}
+  .signs{display:grid;grid-template-columns:1fr;gap:13px;}
+  @media(min-width:720px){.signs{grid-template-columns:1fr 1fr;}}
+  .sign{display:flex;gap:14px;align-items:flex-start;background:#fff;border:2px dashed var(--teal-soft);border-radius:18px;padding:20px 22px;text-align:left;}
+  .sign .ic{flex:0 0 auto;font-size:1.4rem;line-height:1;margin-top:1px;}
+  .sign p{font-size:1.02rem;}
+  .sign p b{font-weight:800;color:var(--red-deep);}
+  .recognition .closer{margin:32px auto 0;text-align:center;font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.8vw,1.8rem);max-width:28ch;line-height:1.25;color:var(--ink);}
+  .nudge{margin-top:14px;text-align:center;color:var(--red-deep);font-weight:800;}
+
+  /* stakes */
+  .stakes{background:var(--navy-dark);color:#E7EEF5;}
+  .stakes .eyebrow{color:var(--teal-soft);}
+  .stakes .eyebrow::before{background:var(--teal);}
+  .stakes h2{color:#fff;font-size:clamp(1.9rem,4vw,2.8rem);}
+  .stakes .sub{color:#C7D5E3;max-width:54ch;}
+  .stat-row{display:grid;grid-template-columns:1fr;gap:26px;}
+  @media(min-width:820px){.stat-row{grid-template-columns:repeat(3,1fr);}}
+  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(231,238,245,.16);border-radius:18px;padding:26px;}
+  .stat .big{font-family:var(--display);font-weight:600;font-size:clamp(2.3rem,5vw,3.1rem);line-height:1;color:var(--teal-soft);}
+  .stat:nth-child(2) .big{color:#ff8a93;}
+  .stat .txt{margin-top:12px;color:#DCE6F0;font-size:1rem;}
+  .stat .src{margin-top:12px;font-size:0.76rem;color:#8A9BB0;}
+  .stakes .turn{margin-top:48px;padding:32px;border-radius:20px;background:rgba(63,177,172,.14);border:1px solid rgba(63,177,172,.34);
+    display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;justify-content:space-between;}
+  .stakes .turn p{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.6vw,1.7rem);color:#fff;max-width:24ch;line-height:1.25;}
+  .stakes .turn .small{font-family:var(--body);font-size:0.95rem;color:#DCE6F0;font-weight:700;margin-top:8px;}
+
+  /* method */
+  .method{background:var(--surface);}
+  .method h2{font-size:clamp(1.9rem,4vw,2.8rem);}
+  .method .headp{color:var(--ink-soft);max-width:48ch;}
+  .steps{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1040px){.steps{grid-template-columns:repeat(4,1fr);}}
+  .step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 22px;}
+  .step .ring{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-weight:600;font-size:1.25rem;margin-bottom:14px;color:#fff;}
+  .step:nth-child(1) .ring{background:var(--red);}
+  .step:nth-child(2) .ring{background:var(--teal);}
+  .step:nth-child(3) .ring{background:var(--blue);}
+  .step:nth-child(4) .ring{background:var(--teal-deep);}
+  .step h3{font-size:1.2rem;font-weight:600;margin-bottom:6px;}
+  .step p{font-size:0.98rem;color:var(--ink-soft);}
+  .method .ease{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+  .pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:700;font-size:0.92rem;display:inline-flex;gap:8px;align-items:center;}
+
+  /* meg (kept left, beside photo) */
+  .meg-grid{display:grid;grid-template-columns:1fr;gap:clamp(30px,5vw,56px);align-items:center;}
+  @media(min-width:920px){.meg-grid{grid-template-columns:0.82fr 1.18fr;}}
+  .meg-photo{border-radius:24px;aspect-ratio:4/5;background:linear-gradient(160deg,#dff1f0,#bfe2e6);
+    border:4px solid #fff;box-shadow:var(--soft-shadow);display:flex;align-items:flex-end;padding:20px;position:relative;overflow:hidden;}
+  .meg-photo .ph{font-size:0.84rem;font-weight:700;background:rgba(255,255,255,.82);padding:8px 14px;border-radius:8px;}
+  .meg-photo .seal{position:absolute;top:16px;right:16px;width:82px;height:82px;border-radius:50%;background:var(--red);
+    color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:var(--display);font-size:0.7rem;line-height:1.1;padding:8px;}
+  .meg-photo .seal b{font-size:1.4rem;display:block;}
+  .meg h2{font-size:clamp(1.9rem,4vw,2.7rem);margin:12px 0 18px;max-width:20ch;}
+  .meg .body{color:var(--ink-soft);max-width:54ch;}
+  .meg .body + .body{margin-top:14px;}
+  .meg .pull{font-family:var(--display);font-weight:400;font-size:clamp(1.2rem,2.4vw,1.5rem);color:var(--ink);
+    border-left:4px solid var(--red);padding-left:20px;margin:26px 0 8px;line-height:1.3;}
+  .meg .sign-off{font-family:var(--hand);font-size:1.9rem;color:var(--red);margin-top:6px;}
+  .creds{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+  .cred{font-size:0.82rem;font-weight:700;background:var(--surface);border:1px solid var(--line);padding:8px 14px;border-radius:999px;}
+
+  /* proof */
+  .proof{background:var(--surface2);}
+  .proof h2{font-size:clamp(1.9rem,4vw,2.8rem);}
+  .proof .sub{color:var(--ink-soft);max-width:52ch;}
+  .jump{display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 28px;margin:0 auto 38px;max-width:760px;box-shadow:var(--soft-shadow);}
+  .jump .levels{display:flex;align-items:flex-end;gap:6px;}
+  .jump .bar{width:28px;background:var(--surface);border-radius:6px 6px 0 0;}
+  .jump .bar.hi{background:var(--teal);}
+  .jump .bar.top{background:var(--red);}
+  .jump .jtext{flex:1;min-width:230px;}
+  .jump .jtext .big{font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,3vw,1.9rem);color:var(--ink);}
+  .jump .jtext p{color:var(--ink-soft);font-size:0.96rem;margin-top:6px;}
+  .testis{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:760px){.testis{grid-template-columns:repeat(3,1fr);}}
+  .testi{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;}
+  .testi .stars{color:var(--red);letter-spacing:2px;margin-bottom:10px;}
+  .testi blockquote{margin:0;font-size:0.99rem;color:var(--ink);line-height:1.55;}
+  .testi .who{margin-top:14px;font-size:0.85rem;color:var(--ink-soft);font-weight:800;}
+
+  /* carousels (real proof) */
+  .proof .sub-h{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3vw,2rem);text-align:center;margin:56px auto 14px;color:var(--ink);}
+  .carousel{position:relative;margin-top:14px;}
+  .carousel-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 6px 10px;align-items:center;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+  .carousel-track::-webkit-scrollbar{display:none;}
+  .slide{flex:0 0 auto;scroll-snap-align:center;}
+  .results .slide{width:min(90%,480px);}
+  .tcar .slide{width:min(82%,356px);}
+  .shot{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--soft-shadow);overflow:hidden;}
+  .shot img{display:block;width:100%;height:auto;}
+  .cap{margin:12px auto 0;text-align:center;font-weight:700;font-size:0.92rem;color:var(--ink-soft);max-width:42ch;}
+  .cap b{color:var(--ink);}
+  .car-btn{position:absolute;top:44%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;box-shadow:var(--soft-shadow);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:4;color:var(--ink);font-size:1.25rem;}
+  .car-btn.prev{left:-4px;}
+  .car-btn.next{right:-4px;}
+  .car-btn:hover{background:var(--surface);}
+  @media(min-width:820px){.car-btn.prev{left:-20px;}.car-btn.next{right:-20px;}}
+  .swipe-hint{text-align:center;color:var(--ink-soft);font-size:0.84rem;margin-top:8px;}
+  @media(min-width:820px){.swipe-hint{display:none;}}
+
+  /* offer */
+  .offer{background:var(--surface);}
+  .offer-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(30px,5vw,54px);
+    max-width:820px;margin:0 auto;text-align:center;box-shadow:var(--soft-shadow);}
+  .offer h2{font-size:clamp(2rem,4vw,2.9rem);margin:14px auto 16px;max-width:20ch;}
+  .offer .lead{color:var(--ink-soft);max-width:48ch;margin:0 auto 16px;}
+  .scarcity{display:inline-flex;align-items:center;gap:10px;background:var(--navy-dark);color:#fff;
+    font-size:0.88rem;font-weight:800;padding:10px 18px;border-radius:999px;margin-bottom:8px;}
+  .scarcity .blip{width:9px;height:9px;border-radius:50%;background:var(--red);animation:pulse 2.4s infinite;}
+  .offer .guarantee{margin-top:24px;display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;color:var(--ink-soft);font-size:0.92rem;font-weight:700;}
+  .offer .guarantee span{display:inline-flex;align-items:center;gap:7px;}
+  .offer .guarantee b{color:var(--teal-deep);}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(228,60,72,.55);}70%{box-shadow:0 0 0 20px rgba(228,60,72,0);}100%{box-shadow:0 0 0 0 rgba(228,60,72,0);}}
+
+  /* faq */
+  .faq h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:32px;text-align:center;}
+  .faq-list{max-width:760px;margin:0 auto;}
+  details{border-bottom:1px solid var(--line);}
+  summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:20px 4px;font-family:var(--display);font-weight:500;font-size:clamp(1.1rem,2vw,1.3rem);}
+  summary::-webkit-details-marker{display:none;}
+  summary .pm{flex:0 0 auto;width:28px;height:28px;border-radius:50%;border:3px solid var(--teal);position:relative;transition:transform .2s ease;}
+  summary .pm::before,summary .pm::after{content:"";position:absolute;background:var(--teal-deep);left:50%;top:50%;transform:translate(-50%,-50%);}
+  summary .pm::before{width:12px;height:2px;}
+  summary .pm::after{width:2px;height:12px;transition:opacity .2s ease;}
+  details[open] summary .pm::after{opacity:0;}
+  details[open] summary .pm{transform:rotate(90deg);}
+  details .ans{padding:0 4px 22px;color:var(--ink-soft);max-width:62ch;}
+
+  /* final */
+  .final{background:var(--navy-dark);color:#fff;text-align:center;}
+  .final .kicker{font-family:var(--hand);color:var(--teal-soft);font-size:clamp(1.7rem,3vw,2.2rem);margin-bottom:6px;}
+  .final h2{color:#fff;font-size:clamp(2.1rem,5vw,3.2rem);max-width:18ch;margin:0 auto 16px;}
+  .final p{color:#C7D5E3;max-width:44ch;margin:0 auto 30px;}
+
+  /* footer */
+  footer.ft{background:#16273D;color:#9FB1C6;padding:46px 0 120px;}
+  .ft-inner{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start;}
+  .ft-logo-chip{background:#fff;border-radius:16px;padding:12px 16px;display:inline-block;}
+  .ft-logo-chip img{height:54px;width:auto;}
+  .ft a{color:#DCE6F0;text-decoration:none;}
+  .ft a:hover{text-decoration:underline;}
+  .ft .contact p{margin:6px 0;font-size:0.95rem;}
+  .ft .sources{font-size:0.74rem;color:#6E7F95;max-width:62ch;margin-top:22px;line-height:1.5;}
+  .ft .legal{font-size:0.74rem;color:#6E7F95;margin-top:16px;}
+
+  /* sticky mobile cta */
+  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,255,255,0.97);
+    border-top:1px solid var(--line);padding:11px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between;
+    box-shadow:0 -10px 30px -18px rgba(35,64,94,.5);}
+  .sticky-cta .s-txt{font-weight:800;font-size:0.92rem;line-height:1.15;}
+  .sticky-cta .s-txt small{display:block;font-weight:600;color:var(--ink-soft);font-size:0.78rem;}
+  .sticky-cta .btn{padding:13px 20px;font-size:0.96rem;white-space:nowrap;}
+  @media(min-width:760px){.sticky-cta{display:none;} footer.ft{padding-bottom:46px;}}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1 !important;transform:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" aria-label="Be Alright Tutoring home"><img class="logo-img" src="assets/img/logo.png" alt="Be Alright Tutoring"></a>
+    <a class="btn btn-primary nav-cta" href="https://go.bealrighttutoring.org/form">Book my free call <span class="arrow">&rarr;</span></a>
+  </div>
+</header>
+<a id="top"></a>
+
+<!-- HERO (centered) -->
+<section class="hero">
+  <div class="wrap">
+    <span class="pre">For parents of kids ages 4&ndash;11 who struggle to read</span>
+    <h1>When Your Child Struggles to Read, <em>the Right Help Changes Everything</em></h1>
+    <p class="sub">It all happens <b>from home</b>, <b>one&ndash;on&ndash;one</b>, with a reading plan <b>built just for your child</b> &mdash; no driving to a center, no one&ndash;size&ndash;fits&ndash;all worksheets. Just the right help, from someone who has guided hundreds of kids through this exact struggle.</p>
+
+    <!-- VSL (Vidalytics) -->
+    <div class="vsl-shell">
+      <div class="vsl-note hand">watch this first! &darr;</div>
+      <div class="vsl-frame">
+        <div id="vidalytics_embed_7L8GXVlMk9VXYGxO" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+        <script type="text/javascript">
+        (function (v, i, d, a, l, y, t, c, s) {
+            y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+            if (!vsl){vsl=function(u,cb){
+                if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+                if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+                i.getElementsByTagName("head")[0].appendChild(s);
+            };}
+            vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+        })(window, document, 'Vidalytics', 'vidalytics_embed_7L8GXVlMk9VXYGxO', 'https://fast.vidalytics.com/embeds/aqLBzbf2/7L8GXVlMk9VXYGxO/');
+        </script>
+      </div>
+    </div>
+
+    <!-- CTA below the video -->
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-big" href="https://go.bealrighttutoring.org/form">Book my free call <span class="arrow">&rarr;</span></a>
+      <p class="hero-reassure">&hearts;&nbsp; It's free. No pressure. Just a friendly talk about your child.</p>
+    </div>
+
+    <!-- benefit points -->
+    <ul class="hbenefits">
+      <li><span class="c">&check;</span> A real reading teacher, just for your kid &mdash; not an app</li>
+      <li><span class="c">&check;</span> Done from your own home, on your schedule</li>
+      <li><span class="c">&check;</span> Many kids jump 1&ndash;2 reading levels &mdash; often in one year</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="reveal"><div class="num">20<span>+</span></div><div class="lbl">Years teaching kids to read</div></div>
+    <div class="reveal"><div class="num">200<span>+</span></div><div class="lbl">Kids helped, one by one</div></div>
+    <div class="reveal"><div class="num">10,000<span>+</span></div><div class="lbl">One-on-one hours</div></div>
+    <div class="reveal"><div class="num">1<span>:</span>1</div><div class="lbl">Always just your child</div></div>
+  </div>
+</div>
+
+<!-- RECOGNITION -->
+<section class="section recognition">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">You already know</span>
+      <h2>You don't need a test to tell you something's wrong.</h2>
+      <p class="micro" style="font-size:1.05rem;color:var(--ink-soft);">Do any of these sound like your house? If so, your gut is right.</p>
+    </div>
+    <div class="signs">
+      <div class="sign reveal"><span class="ic">&#128528;</span><p>They <b>make excuses</b> right before reading time. Every night.</p></div>
+      <div class="sign reveal"><span class="ic">&#128064;</span><p>They <b>guess</b> words from the first letter instead of sounding them out.</p></div>
+      <div class="sign reveal"><span class="ic">&#128259;</span><p>They read the same line three times &mdash; and you watch them <b>give up</b> a little more each time.</p></div>
+      <div class="sign reveal"><span class="ic">&#128148;</span><p>They've started to say the words that break your heart: <b>&ldquo;I'm dumb.&rdquo;</b></p></div>
+      <div class="sign reveal"><span class="ic">&#128201;</span><p>You watch the other kids race ahead, and your heart sinks as yours slips <b>further behind.</b></p></div>
+      <div class="sign reveal"><span class="ic">&#128586;</span><p>A bright, funny kid who has started to <b>shrink</b> &mdash; hiding in the back, hoping no one calls on them.</p></div>
+    </div>
+    <p class="closer reveal">This is not your child's fault. And it is <span class="mark">not too late.</span></p>
+    <p class="nudge reveal">But the longer you wait, the harder it gets. Here's why &darr;</p>
+  </div>
+</section>
+
+<!-- STAKES -->
+<section class="section stakes" id="stakes">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">The hard truth</span>
+      <h2>Reading doesn't wait for kids to catch up.</h2>
+      <p class="sub">We're not trying to scare you. These are real numbers. They're also the reason a little help <b>now</b> beats a lot of worry later.</p>
+    </div>
+    <div class="stat-row">
+      <div class="stat reveal">
+        <div class="big">2 in 5</div>
+        <p class="txt">That's how many 4th graders today can't read at a basic level. It's the most in over 20 years.</p>
+        <p class="src">Source: The Nation's Report Card (NAEP), 2024</p>
+      </div>
+      <div class="stat reveal">
+        <div class="big">4&times;</div>
+        <p class="txt">Kids who can't read well by the end of 3rd grade are 4 times more likely to not finish high school.</p>
+        <p class="src">Source: Annie E. Casey Foundation, &ldquo;Double Jeopardy&rdquo;</p>
+      </div>
+      <div class="stat reveal">
+        <div class="big">Grade 3</div>
+        <p class="txt">Until then, kids <b>learn to read</b>. After that, they <b>read to learn</b>. Soon, every subject needs it.</p>
+        <p class="src">Source: Hunter College / Annie E. Casey research</p>
+      </div>
+    </div>
+    <div class="turn reveal">
+      <div>
+        <p>But here's the good news: a struggling reader is not a stuck reader.</p>
+        <p class="small">Every month you wait, the gap grows. Every month you act, it shrinks. So let's start now.</p>
+      </div>
+      <a class="btn btn-teal" href="https://go.bealrighttutoring.org/form">Help my child now <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="section method">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Simple for you. Made just for your child.</h2>
+      <p class="headp">No big workbooks. No room full of strangers. Just your child, a kind expert, and a plan that fits how <em>they</em> learn. We do the hard part.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="ring">1</div><h3>We find the real problem</h3><p>A warm chat and a quick check show us the exact spot where reading breaks down. No guessing.</p></div>
+      <div class="step reveal"><div class="ring">2</div><h3>We build their plan</h3><p>Dr. Meg makes a plan just for your child &mdash; their gaps, their pace, the stuff they love.</p></div>
+      <div class="step reveal"><div class="ring">3</div><h3>We meet from home</h3><p>Live, one-on-one lessons online. No driving. No waiting room. Just your kid and Dr. Meg.</p></div>
+      <div class="step reveal"><div class="ring">4</div><h3>You see them shine</h3><p>Confidence comes first. Then the jump &mdash; many kids climb 1 to 2 reading levels.</p></div>
+    </div>
+    <div class="ease reveal">
+      <span class="pill">&#9201;&#65039; Just minutes a day</span>
+      <span class="pill">&#127968; 100% from home</span>
+      <span class="pill">&#128512; No nightly fights</span>
+      <span class="pill">&#128221; No contract to start</span>
+    </div>
+  </div>
+</section>
+
+<!-- MEG -->
+<section class="section meg">
+  <div class="wrap meg-grid">
+    <div class="reveal">
+      <div class="meg-photo" style="background-image:url('assets/img/dr-meg.jpg');background-size:cover;background-position:center 28%;">
+        <div class="seal"><b>PhD</b>Doctor of<br>Education</div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow reveal">From one mom to another</span>
+      <h2 class="reveal">Dr. Meg didn't just read about this. She lived it &mdash; four times.</h2>
+      <div class="reveal">
+        <p class="body">Be Alright Tutoring didn't start in an office. It started at a kitchen table. Dr. Meg watched all four of her own kids struggle to read. The usual advice &mdash; &ldquo;they'll grow out of it&rdquo; &mdash; just wasn't enough.</p>
+        <p class="body">So she got her doctorate in education. Then she spent 20 years turning what worked for her own kids into a plan she can give to yours. Today she's helped over 200 children read &mdash; one child at a time.</p>
+        <p class="pull">&ldquo;I've sat right where you're sitting. I know the worry that keeps you up at night. And I know it can get better &mdash; because I watched it happen in my own home, four times.&rdquo;</p>
+        <p class="sign-off">&ndash; Dr. Meg</p>
+        <div class="creds">
+          <span class="cred">Doctorate in education</span>
+          <span class="cred">20+ years teaching</span>
+          <span class="cred">Mom of four</span>
+          <span class="cred">Founder, Be Alright</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="section proof">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Real kids, real change</span>
+      <h2>First the smile comes back. Then the grades.</h2>
+      <p class="sub">Grades aren't everything. But when a child jumps a reading level, you can see it &mdash; and you can feel it at home. These are real progress reports and messages from families, shared with permission.</p>
+    </div>
+    <div class="jump reveal">
+      <div class="levels" aria-hidden="true">
+        <div class="bar" style="height:44px"></div>
+        <div class="bar" style="height:62px"></div>
+        <div class="bar hi" style="height:92px"></div>
+        <div class="bar top" style="height:118px"></div>
+      </div>
+      <div class="jtext">
+        <div class="big">Up 1 to 2 reading levels</div>
+        <p>A common result for kids who stick with the plan &mdash; often in a single school year.</p>
+      </div>
+    </div>
+    <!-- RESULTS carousel: real progress reports -->
+    <div class="carousel results reveal">
+      <button class="car-btn prev" aria-label="Previous result">&larr;</button>
+      <div class="carousel-track">
+        <div class="slide"><div class="shot"><img src="assets/img/result-cameron.jpg" alt="Cameron's MobyMax progress report showing grade-level growth" loading="lazy"></div><p class="cap"><b>Cameron</b> &mdash; up 1.1 to 1.3 grade levels in about 3 months</p></div>
+        <div class="slide"><div class="shot"><img src="assets/img/result-aarohi-summary.jpg" alt="Aarohi's progress report summary" loading="lazy"></div><p class="cap"><b>Aarohi (kindergarten)</b> &mdash; now reading at a 1st-grade level</p></div>
+        <div class="slide"><div class="shot"><img src="assets/img/result-aarohi-phonics.jpg" alt="Aarohi's phonics mastery table" loading="lazy"></div><p class="cap"><b>Aarohi</b> &mdash; Grade 1 phonics jumped 6% &rarr; 86%</p></div>
+        <div class="slide"><div class="shot"><img src="assets/img/result-caroline.jpg" alt="Caroline's progress report" loading="lazy"></div><p class="cap"><b>Caroline</b> &mdash; phonics 2.2 &rarr; 3.5 (up 1.3 grade levels)</p></div>
+        <div class="slide"><div class="shot"><img src="assets/img/result-alyssa.jpg" alt="Alyssa's MobyMax progress report showing grade-level growth" loading="lazy"></div><p class="cap"><b>Alyssa</b> &mdash; reading level 0.2 &rarr; 2.8 (up 2.6 grade levels)</p></div>
+        <div class="slide"><div class="shot"><img src="assets/img/result-natalia.jpg" alt="Natalia's MobyMax progress report showing grade-level growth" loading="lazy"></div><p class="cap"><b>Natalia</b> &mdash; reading 1.8 &rarr; 4.3 (up 2.5 grade levels)</p></div>
+      </div>
+      <button class="car-btn next" aria-label="Next result">&rarr;</button>
+    </div>
+    <p class="swipe-hint reveal">&#128072; Swipe to see more real results</p>
+
+    <h3 class="sub-h reveal">What parents are saying</h3>
+    <div class="carousel tcar reveal">
+      <button class="car-btn prev" aria-label="Previous testimonial">&larr;</button>
+      <div class="carousel-track">
+        <div class="slide"><div class="shot"><img src="assets/img/review-damon.jpg" alt="Text message from Damon's family" loading="lazy"></div><p class="cap">&ldquo;Damon is no longer screaming about reading&rdquo;</p></div>
+        <div class="slide"><div class="shot"><img src="assets/img/review-alexis.jpg" alt="Alexis's reassessment results" loading="lazy"></div><p class="cap">Alexis &mdash; 2 grade levels of growth in language</p></div>
+        <div class="slide"><div class="shot"><img src="assets/img/review-facebook.jpg" alt="Facebook review from a parent" loading="lazy"></div><p class="cap">A proud parent's review on Facebook</p></div>
+        <div class="slide"><div class="shot"><img src="assets/img/review-sapphira-email.jpg" alt="Email from Sapphira's mom about her tutoring" loading="lazy"></div><p class="cap">&ldquo;I have truly never seen her so engaged&rdquo;</p></div>
+      </div>
+      <button class="car-btn next" aria-label="Next testimonial">&rarr;</button>
+    </div>
+    <p class="swipe-hint reveal">&#128072; Swipe for more</p>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="section offer" id="apply">
+  <div class="wrap">
+    <div class="offer-card reveal">
+      <span class="scarcity"><span class="blip"></span> Only a few spots open &mdash; it's one-on-one</span>
+      <h2>Start with a free call. Not a commitment.</h2>
+      <p class="lead">Because every child works right with Dr. Meg, she can only take a few new kids at a time. On the call, you'll learn exactly what's holding your child back &mdash; even if you never sign up.</p>
+      <p class="lead"><b>The most costly choice is the free one:</b> waiting another year and hoping it fixes itself.</p>
+      <a class="btn btn-primary btn-big" href="https://go.bealrighttutoring.org/form" style="margin-top:6px;">Book my free call <span class="arrow">&rarr;</span></a>
+      <div class="guarantee">
+        <span><b>&check;</b> A real teacher, not an app</span>
+        <span><b>&check;</b> 100% from home</span>
+        <span><b>&check;</b> No contract to start</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq">
+  <div class="wrap">
+    <h2 class="reveal">Questions moms ask first</h2>
+    <div class="faq-list">
+      <details class="reveal"><summary>My child is only 4 (or already 11). Too early? Too late?<span class="pm"></span></summary><div class="ans">Neither. This is made for ages 4 up to about 5th grade. Early is great. Later still works well. Kids can grow as readers at any age &mdash; we just start in the right spot.</div></details>
+      <details class="reveal"><summary>Can online really help with reading?<span class="pm"></span></summary><div class="ans">Yes &mdash; and often it's better. Your child is calm at home. There's no drive and no waiting room. The whole lesson is just for them, live with Dr. Meg. It's not an app left to do the work alone.</div></details>
+      <details class="reveal"><summary>We already have a tutor or an IEP. How is this different?<span class="pm"></span></summary><div class="ans">Most tutoring just does the same thing louder. We start by finding the exact spot where reading breaks, then build a plan only for your child. Many families come to us after other help stopped working. It can work right alongside your child's school team.</div></details>
+      <details class="reveal"><summary>How fast will we see a change?<span class="pm"></span></summary><div class="ans">Confidence often shifts in the first few weeks. Bigger jumps in reading level grow from there &mdash; many kids climb 1 to 2 levels over time. Your free call will give you a real picture for your child.</div></details>
+      <details class="reveal"><summary>What does it cost?<span class="pm"></span></summary><div class="ans">Every plan is one-on-one and made to fit, so the price depends on what your child needs. That's what the free call is for &mdash; a clear, honest answer with no pressure to sign up.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="section final">
+  <div class="wrap">
+    <p class="kicker reveal">It's going to be alright.</p>
+    <h2 class="reveal">Your child is one good plan away from loving books.</h2>
+    <p class="reveal">Spend 20 minutes with Dr. Meg. Leave knowing what's wrong and what to do &mdash; even if you do it on your own.</p>
+    <a class="btn btn-teal btn-big reveal" href="https://go.bealrighttutoring.org/form">Book my free call <span class="arrow">&rarr;</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="wrap ft-inner">
+    <div>
+      <span class="ft-logo-chip"><img src="assets/img/logo.png" alt="Be Alright Tutoring"></span>
+      <p style="margin-top:14px;max-width:30ch;font-size:0.92rem;">One-on-one online reading help for kids ages 4&ndash;11.</p>
+    </div>
+    <div class="contact">
+      <p><b style="color:#fff;">Dr. Meg Murray</b></p>
+      <p><a href="tel:7325694413">732.569.4413</a></p>
+      <p><a href="mailto:drmeg@bealrighttutoring.com">drmeg@bealrighttutoring.com</a></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="sources">Sources: U.S. Department of Education, National Center for Education Statistics &mdash; <em>The Nation's Report Card (NAEP)</em>, 2024 reading assessment; and D. J. Hernandez, <em>&ldquo;Double Jeopardy: How Third-Grade Reading Skills and Poverty Influence High School Graduation,&rdquo;</em> Annie E. Casey Foundation, 2011/2012. Reading results vary by child and are not guaranteed.</p>
+    <p class="legal">&copy; <span id="yr"></span> Be Alright Tutoring. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <div class="s-txt">Help your child read<small>Free call &middot; no pressure</small></div>
+  <a class="btn btn-primary" href="https://go.bealrighttutoring.org/form">Book now <span class="arrow">&rarr;</span></a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('in');});return;}
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el,i){el.style.transitionDelay=Math.min(i%4*0.06,0.18)+'s';io.observe(el);});
+  })();
+  document.querySelectorAll('.carousel').forEach(function(root){
+    var track=root.querySelector('.carousel-track');
+    var prev=root.querySelector('.prev'), next=root.querySelector('.next');
+    function step(){var s=track.querySelector('.slide');return s?s.getBoundingClientRect().width+18:300;}
+    if(prev)prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
+    if(next)next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
+  });
+</script>
+</body>
+</html>
