@@ -51,7 +51,13 @@
   .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
 
   /* cover */
-  .cover{background:radial-gradient(1200px 700px at 70% -10%,#e7f2f0,transparent),linear-gradient(160deg,#ffffff,#eef4f4)}
+  .cover{background:
+    radial-gradient(760px 520px at 12% 6%, rgba(239,90,106,.16), transparent 60%),
+    radial-gradient(840px 560px at 90% 12%, rgba(47,143,134,.24), transparent 60%),
+    radial-gradient(780px 640px at 50% 116%, rgba(106,160,216,.22), transparent 60%),
+    linear-gradient(160deg,#ffffff,#eef5f4)}
+  .accentbar{display:block;width:64px;height:5px;border-radius:5px;background:linear-gradient(90deg,var(--teal),var(--warm));margin:2px auto 26px}
+  .cover .tag b{color:var(--teal-dk);font-weight:800}
   .logo{width:96px;height:96px;border-radius:24px;background:linear-gradient(135deg,var(--teal),var(--teal-dk));
     display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:34px;
     box-shadow:0 18px 40px rgba(47,143,134,.28);margin-bottom:28px}
@@ -59,7 +65,7 @@
   .cover h1{font-size:clamp(38px,7vw,72px);font-weight:800}
   .cover .wrap{text-align:center;display:flex;flex-direction:column;align-items:center}
   .cover .tag{font-size:clamp(17px,2.2vw,22px);color:var(--muted);margin:0 auto;max-width:560px}
-  .cover .cred{margin-top:26px;font-size:15px;color:var(--teal-dk);font-weight:700}
+  .cover .cred{margin-top:24px;font-size:14.5px;color:var(--teal-dk);font-weight:700;background:rgba(47,143,134,.12);padding:9px 18px;border-radius:999px;display:inline-block}
   .scrollcue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:13px;
     font-weight:600;letter-spacing:.5px;display:flex;flex-direction:column;align-items:center;gap:8px;animation:bob 1.8s ease-in-out infinite}
   @keyframes bob{50%{transform:translateX(-50%) translateY(7px)}}
@@ -91,6 +97,8 @@
     display:flex;align-items:center;justify-content:center;color:#93a8ab;font-size:13px;font-weight:600;margin-bottom:16px;text-align:center;padding:10px}
   .tcard h3{font-size:19px}
   .tcard .role{color:var(--teal-dk);font-weight:700;font-size:14px;margin-top:4px}
+  .tcard .creds{display:inline-block;margin:10px auto 2px;font-size:12.5px;font-weight:800;color:var(--teal-dk);
+    background:rgba(47,143,134,.12);border:1px solid rgba(47,143,134,.24);padding:6px 12px;border-radius:10px;line-height:1.35}
   .tcard .bio{color:var(--muted);font-size:13.5px;margin-top:10px}
   .chips{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:14px}
   .chip{font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;background:var(--tint);color:var(--teal-dk)}
@@ -100,6 +108,9 @@
   .stat{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px 20px;text-align:center}
   .stat .num{font-size:clamp(34px,4.4vw,50px);font-weight:800;color:var(--teal-dk);line-height:1}
   .stat .lab{color:var(--muted);font-size:14px;margin-top:10px;font-weight:600}
+  .stat.feature{background:linear-gradient(135deg,rgba(47,143,134,.10),rgba(232,161,60,.16));border:2px solid var(--warm);box-shadow:0 10px 26px rgba(232,161,60,.20)}
+  .stat.feature .num{color:var(--warm)}
+  .stat.feature .lab{color:var(--ink)}
 
   /* placeholder image */
   .ph{border:2px dashed #c4d3d3;background:repeating-linear-gradient(45deg,#f0f5f5,#f0f5f5 12px,#eaf1f1 12px,#eaf1f1 24px);
@@ -179,7 +190,8 @@
 <section id="s0" class="cover">
   <div class="wrap rv">
     <img class="logo-img" src="/explore/assets/logo.png" alt="Be Alright Tutoring">
-    <p class="tag">One-to-one reading intervention, built around your child — and only your child.</p>
+    <span class="accentbar"></span>
+    <p class="tag">One-to-one reading intervention, <b>built around your child</b> — and only your child.</p>
     <p class="cred">Founded by Dr. Meg Murray · Doctorate in Education · Mom of four</p>
   </div>
   <div class="scrollcue">SCROLL<span>↓</span></div>
@@ -212,10 +224,10 @@
     <div class="eyebrow rv"><b>02</b> How the program works</div>
     <h2 class="big rv d1">A clear path — not a mystery.</h2>
     <div class="steps">
-      <div class="step rv d1"><div class="n">1</div><h3>We assess first</h3><p>The very first session finds exactly
-        where reading is breaking down, going all the way back to the foundations. No guessing.</p></div>
-      <div class="step rv d2"><div class="n">2</div><h3>A specialist matched to your child</h3><p>A certified,
+      <div class="step rv d1"><div class="n">1</div><h3>A specialist matched to your child</h3><p>A certified,
         master's-level reading teacher — hand-picked for your child. You choose from 3–4 profiles.</p></div>
+      <div class="step rv d2"><div class="n">2</div><h3>Then, a full assessment</h3><p>Your child's very first session
+        pinpoints exactly where reading is breaking down, all the way back to the foundations. No guessing.</p></div>
       <div class="step rv d3"><div class="n">3</div><h3>Two 1:1 sessions a week</h3><p>50 focused minutes each,
         personalized every week. Specialists experienced with IEPs, dyslexia, ADHD, and the spectrum.</p></div>
       <div class="step rv d4"><div class="n">4</div><h3>Growth you can see</h3><p>We re-assess about every four
@@ -229,7 +241,7 @@
   <div class="wrap">
     <div class="eyebrow rv"><b>03</b> Your child's teacher</div>
     <h2 class="big rv d1">Real teachers. Not gig tutors.</h2>
-    <p class="lead rv d2">Certified, experienced classroom teachers — many with master's degrees and specialized
+    <p class="lead rv d2">Certified, experienced classroom teachers — many holding <b>master's and education-specialist (Ed.S.) degrees</b>, with specialized
       training in reading (Wilson, Orton, UFLI). All American English-speaking. You'll see a few profiles and pick
       the one who feels like the best personality match for your child.</p>
     <div class="tutors">
@@ -237,19 +249,22 @@
         <img class="tphoto" src="/explore/assets/tutor-bob.jpg" alt="Bob Nieman">
         <h3>Bob Nieman</h3>
         <div class="role">Elementary Teacher · Science of Reading</div>
-        <p class="bio">Recently retired elementary teacher with 30+ years in K–2 classrooms. B.S. in Elementary Education, Kansas State. Trained in the Science of Reading — evidence-based, hands-on instruction that makes concepts click.</p>
+        <div class="creds">🎓 B.S. Elementary Education · Science of Reading Certified</div>
+        <p class="bio">Recently retired elementary teacher with 30+ years in K–2 classrooms — evidence-based, hands-on instruction that makes concepts click.</p>
         <div class="chips"><span class="chip">30+ yrs</span><span class="chip">Science of Reading</span><span class="chip">K–2</span></div></div>
       <div class="tcard rv d2">
         <img class="tphoto" src="/explore/assets/tutor-ky.jpg" alt="Ky Gay">
         <h3>Ky Gay</h3>
         <div class="role">Reading Specialist · Dyslexia Therapy</div>
-        <p class="bio">20+ years across Pre-K–12 as teacher, academic coach, and school psychologist. Ed.S. in Curriculum &amp; Instruction and M.A. in Educational Psychology. Orton-Gillingham educator and Wilson Level II Dyslexia Therapy practitioner.</p>
+        <div class="creds">🎓 Master's, Educational Psychology · Ed.S., Curriculum &amp; Instruction</div>
+        <p class="bio">20+ years across Pre-K–12 as a teacher, academic coach, and school psychologist. Orton-Gillingham educator and Wilson Level II Dyslexia Therapy practitioner.</p>
         <div class="chips"><span class="chip">Orton-Gillingham</span><span class="chip">Wilson L II</span><span class="chip">Dyslexia</span><span class="chip">ADHD</span></div></div>
       <div class="tcard rv d3">
         <img class="tphoto" src="/explore/assets/tutor-monica.jpg" alt="Monica Mata">
         <h3>Monica Mata</h3>
         <div class="role">Reading &amp; Literacy Specialist · Bilingual</div>
-        <p class="bio">Bilingual (English/Spanish) educator with 17 years' experience. Master's in Reading Education and Ed.S. in Reading, Literacy &amp; Assessment. Certified in Reading K–12, ESE, ESOL, and Gifted Education.</p>
+        <div class="creds">🎓 Master's, Reading Education · Ed.S., Reading &amp; Literacy</div>
+        <p class="bio">Bilingual (English/Spanish) educator with 17 years' experience. Certified in Reading K–12, ESE, ESOL, and Gifted Education.</p>
         <div class="chips"><span class="chip">Reading K–12</span><span class="chip">Bilingual</span><span class="chip">ESE / ESOL</span></div></div>
     </div>
   </div>
@@ -264,7 +279,7 @@
       <div class="stat rv d1"><div class="num">750+</div><div class="lab">families served</div></div>
       <div class="stat rv d2"><div class="num">120+</div><div class="lab">students currently enrolled</div></div>
       <div class="stat rv d3"><div class="num">32</div><div class="lab">certified teachers</div></div>
-      <div class="stat rv d4"><div class="num">0</div><div class="lab">negative reviews in 3 years</div></div>
+      <div class="stat feature rv d4"><div class="num">0</div><div class="lab">negative reviews in 3 years</div></div>
     </div>
     <!-- Numbers pulled from current records — confirm before each new print of the deck. -->
   </div>
