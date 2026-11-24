@@ -23,10 +23,22 @@ the matching clean path automatically — no extra configuration needed.
 
 ## Tracking
 
-The Meta Pixel (ID `1555926178296998`) is installed on **every page** and fires
-a `PageView` on each visit. The `/thank-you` page additionally fires a
-`Schedule` event on load, so every thank-you view is counted as a scheduled
-appointment in Meta.
+All Meta tracking runs through Google Tag Manager container `GTM-5TTWDZTV`
+(pixel/dataset `1555926178296998`). The same container is on beontrackedu.com.
+There is no hard-coded pixel snippet in these pages; do not add one.
+
+- PageView: GTM Meta Pixel tag on every page, mirrored server-side by the Stape
+  data tag (sGTM at rrvqewob.usv.stape.io) with the same event_id.
+- Lead: fires on every Typeform submit, including "not a fit" endings.
+- Schedule: fires once per booking, when the GHL booking iframe posts
+  `msgsndr-booking-complete` to the page (/calendar, /calendar-l, and
+  beontrackedu.com/calendar). Browser and Stape server copies share one
+  event_id so Meta deduplicates them. /thank-you does NOT fire Schedule, so
+  refreshing or revisiting it never adds a booking.
+- Schedule is one event name for three calendars (Meg, Bella, Be On Track).
+  Split them in Meta with custom conversions (URL contains
+  start.bealrighttutoring.org/calendar and not calendar-l = Meg;
+  calendar-l = Bella; beontrackedu.com = Be On Track).
 
 ## Structure
 
